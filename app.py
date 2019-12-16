@@ -19,8 +19,8 @@ def send_message():
 	client = Client(account_sid, auth_token)
 
 	message = client.messages.create(
-	    to="+4694080444", 
-	    from_="+4694080444",
+	    to="+14694080444", 
+	    from_="+14694080444",
 	    body="Yinyu Sends a Notification!")
 
 	return(message.sid)

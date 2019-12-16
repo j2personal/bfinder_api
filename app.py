@@ -19,8 +19,8 @@ def send_message():
 	client = Client(account_sid, auth_token)
 
 	message = client.messages.create(
-	    to="+14695140330", 
-	    from_="+4694080444",
+	    to=os.environ.get("TO_NUMBER"), 
+	    from_=os.environ.get("FROM_NUMBER"),
 	    body="Notification Received!")
 
 	return(message.sid)

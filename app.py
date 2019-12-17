@@ -30,11 +30,15 @@ def send_vib():
     send_message("Incoming Notification!")
     return("Vib Sent")
 
-# @app.route('/request_juber', methods=["POST"])
-# def request_juber():
-#     request.form.get("")
-#     send_message("")
-#     return("Vib Sent")
+@app.route('/request_juber', methods=["POST"])
+def request_juber():
+    if request.method == "POST":
+        location = request.form.get("location")
+
+        send_message(f"Juber request -- Pickup at {location}")
+
+        
+        return("Request Sent")
 
 
 
